@@ -1,0 +1,57 @@
+print("=== Завдання 1: Перетворення рядка в число та зворотне перетворення ===")
+
+input_str = input("Введіть число (рядком): ")
+
+try:
+    number = float(input_str)
+    result = number * 2
+    result_str = str(result)
+    print("Результат (рядком):", result_str)
+except ValueError:
+    print("Помилка: введено нечислове значення")
+
+print("\n=== Завдання 2: Арифметичні операції з введеними даними ===")
+
+a = input("Введіть перше число: ")
+b = input("Введіть друге число: ")
+
+try:
+    num1 = float(a)
+    num2 = float(b)
+
+    print(f"Сума: {num1 + num2}")
+    print(f"Різниця: {num1 - num2}")
+    print(f"Добуток: {num1 * num2}")
+    if num2 != 0:
+        print(f"Частка: {num1 / num2}")
+    else:
+        print("Частка: ділення на нуль неможливе.")
+except ValueError:
+    print("Помилка: одне з введених значень не є числом")
+
+print("\n=== Завдання 3: Конвертація списку рядків у список чисел ===")
+
+input_list = input("Введіть числа через кому (наприклад: 1, 2, 3): ")
+
+try:
+    string_numbers = input_list.split(',')
+    numbers = [float(num.strip()) for num in string_numbers]
+
+    total = sum(numbers)
+    average = total / len(numbers)
+
+    print("Сума чисел:", total)
+    print("Середнє значення:", average)
+except ValueError:
+    print("Помилка: список містить нечислові значення")
+
+print("\n=== Завдання 4: Форматування числових значень ===")
+
+input_float = input("Введіть дійсне число: ")
+
+try:
+    float_number = float(input_float)
+    formatted = f"{float_number:.2f}"
+    print("Відформатоване число:", formatted)
+except ValueError:
+    print("Помилка: введено нечислове значення")
